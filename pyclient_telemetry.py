@@ -11,8 +11,8 @@ import time
 # python pyclient_telemetry.py --track yourTrackName --maxEpisodes 2 --maxSteps 5000
 # python pyclient_telemetry.py --track oval --maxEpisodes 2 --maxSteps 5000
 # python pyclient_telemetry.py --track oval-p406 --maxEpisodes 3 --maxSteps 10000
-
 # python pyclient_telemetry.py --track oval-pw-evoviwrc --maxEpisodes 3 --maxSteps 10000
+# python pyclient_telemetry.py --track dirt-corolla --maxEpisodes 3 --maxSteps 10000
 
 
 
