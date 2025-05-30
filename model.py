@@ -68,6 +68,7 @@ class TelemetryDataset(Dataset):
 train_ds = TelemetryDataset(X_train, y_train)
 val_ds   = TelemetryDataset(X_val,   y_val)
 
+# Load your data in mini-batches and Shuffle it
 train_loader = DataLoader(train_ds, batch_size=BATCH_SIZE, shuffle=True)
 val_loader   = DataLoader(val_ds,   batch_size=BATCH_SIZE)
 
@@ -94,13 +95,13 @@ for epoch in range(1, EPOCHS+1):
     train_loss = 0
     for xb, yb in train_loader:
         xb, yb = xb.to(DEVICE), yb.to(DEVICE)
-        optimizer.zero_grad()
+        optimizer.zero_grad() #clear previous gradeients
         preds = model(xb)
-        loss  = criterion(preds, yb)
+        loss  = criterion(preds, yb) # calculate MSE
         loss.backward()
-        optimizer.step()
+        optimizer.step() # applies gradiesnt descesnt
         train_loss += loss.item() * xb.size(0)
-    train_loss /= len(train_ds)
+    train_loss /= len(train_ds)  #avg training loss
 
     model.eval()
     val_loss = 0
