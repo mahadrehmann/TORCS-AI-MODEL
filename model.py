@@ -8,14 +8,14 @@ from torch.utils.data import Dataset, DataLoader
 
 # List of telemetry files to combine
 CSV_FILES = [
-    'telemetry_log_unknown.csv',
-    'telemetry_etrack-corolla.csv',
-    'telemetry_dirt-corolla.csv',
-    'telemetry_dirt-p406.csv',
-    'telemetry_dirt-evo.csv',
-    'telemetry_oval.csv',
-    'telemetry_oval-p406.csv',
-    'telemetry_oval-pw-evoviwrc.csv'
+    'data/telemetry_log_unknown.csv',
+    'data/telemetry_etrack-corolla.csv',
+    'data/telemetry_dirt-corolla.csv',
+    'data/telemetry_dirt-p406.csv',
+    'data/telemetry_dirt-evo.csv',
+    'data/telemetry_oval.csv',
+    'data/telemetry_oval-p406.csv',
+    'data/telemetry_oval-pw-evoviwrc.csv'
 ]
 
 MODEL_OUT = 'torcs_model.pt'

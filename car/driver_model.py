@@ -1,8 +1,8 @@
 # driver_model.py
 
-import msgParser
-import carState
-import carControl
+import car.msgParser
+import car.carState
+import car.carControl
 import numpy as np
 import torch
 import joblib
@@ -30,9 +30,9 @@ class Net(nn.Module):
 
 class Driver(object):
     def __init__(self, stage, manual_mode=False):
-        self.parser  = msgParser.MsgParser()
-        self.state   = carState.CarState()
-        self.control = carControl.CarControl()
+        self.parser  = car.msgParser.MsgParser()
+        self.state   = car.carState.CarState()
+        self.control = car.carControl.CarControl()
 
         # Load scaler
         self.scaler = joblib.load('scaler.save')

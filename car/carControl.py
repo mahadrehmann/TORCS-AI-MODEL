@@ -1,4 +1,4 @@
-import msgParser
+import car.msgParser
 
 class CarControl(object):
     '''
@@ -8,7 +8,7 @@ class CarControl(object):
 
     def __init__(self, accel = 0.0, brake = 0.0, gear = 1, steer = 0.0, clutch = 0.0, focus = 0, meta = 0):
         '''Constructor'''
-        self.parser = msgParser.MsgParser()
+        self.parser = car.msgParser.MsgParser()
         
         self.actions = None
         

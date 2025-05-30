@@ -1,4 +1,4 @@
-import msgParser
+import car.msgParser
 
 class CarState(object):
     '''
@@ -8,7 +8,7 @@ class CarState(object):
 
     def __init__(self):
         '''Constructor'''
-        self.parser = msgParser.MsgParser()
+        self.parser = car.msgParser.MsgParser()
         self.sensors = None
         self.angle = None
         self.curLapTime = None

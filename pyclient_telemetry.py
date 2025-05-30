@@ -3,7 +3,7 @@
 import sys
 import argparse
 import socket
-import msgParser
+import car.msgParser
 import csv
 import os
 import time
@@ -17,8 +17,8 @@ import time
 
 
 # import your driver here (it should expose .drive() and .init(), and control attributes)
-# import driver as driver_module  
-import driver_model as driver_module  
+# import car.driver as driver_module  
+import car.driver_model as driver_module  
 
 def main():
     # 1) Command‑line args
@@ -40,7 +40,7 @@ def main():
 
     # 3) Prepare driver & parser
     driver = driver_module.Driver(args.stage, manual_mode=True)
-    parser_msg = msgParser.MsgParser()
+    parser_msg = car.msgParser.MsgParser()
 
     # 4) CSV setup
     csv_filename = f'telemetry_{args.track}.csv'

@@ -1,8 +1,8 @@
 # driver.py
 
-import msgParser
-import carState
-import carControl
+import car.msgParser
+import car.carState
+import car.carControl
 import keyboard    # pip install keyboard
 import time
 
@@ -37,9 +37,9 @@ class Driver(object):
         self.stage        = stage
         self.manual_mode  = manual_mode
 
-        self.parser       = msgParser.MsgParser()
-        self.state        = carState.CarState()
-        self.control      = carControl.CarControl()
+        self.parser       = car.msgParser.MsgParser()
+        self.state        = car.carState.CarState()
+        self.control      = car.carControl.CarControl()
 
         # shared AI settings
         self.max_speed    = 200.0
